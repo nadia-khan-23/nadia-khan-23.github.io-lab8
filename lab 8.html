@@ -44,17 +44,20 @@
     <button onclick="toggleColorblindMode()">Colorblind Mode</button>
 
     <!-- Part D: Images with Alt-Text Display -->
+
+    <button onclick="toggleAltText()">Alt Text</button>
+    
     <h2>Gallery</h2>
     <div>
-        <img src="image1.jpg" alt="A hockey puck in the bottom left corner that says 'Official Game Puck' with the ongoing game blurred in the background" onclick="showAltText('alt1')">
+        <img src="image1.jpg" alt="A hockey puck in the bottom left corner that says 'Official Game Puck' with the ongoing game blurred in the background">
         <imgcaption>The hockey puck from the TMU v Guelph game that I caught on November 1, 2024, in the Mattamy Athletic Center. </imgcaption>
         <p class="alt-text" id="alt1"> Alt: A hockey puck in the bottom left corner that says 'Official Game Puck' with the ongoing game blurred in the background</p>
 
-        <img src="image2.jpg" alt="Two cups of ice cream served inside waffle bowls held out infront of a lively pink background" onclick="showAltText('alt2')">
+        <img src="image2.jpg" alt="Two cups of ice cream served inside waffle bowls held out infront of a lively pink background">
         <imgcaption>The ice Cream that me and my sister ate on October 28, 2024, in Marble Slab Creamery. </imgcaption>
         <p class="alt-text" id="alt2">Alt: Two cups of ice cream served inside waffle bowls held out infront of a lively pink background.</p>
 
-        <img src="image3.jpg" alt="A maroon party favour box that is tied with a gold ribbon and has 'Just For You' written in gold on the front." onclick="showAltText('alt3')">
+        <img src="image3.jpg" alt="A maroon party favour box that is tied with a gold ribbon and has 'Just For You' written in gold on the front.">
         <imgcaption>The party favours from my friend's wedding on October 11, 2024, in Mississauga. </imgcaption>
         <p class="alt-text" id="alt3">Alt: A maroon party favour box that is tied with a gold ribbon and has 'Just For You' written in gold on the front.</p>
     </div>
@@ -70,10 +73,12 @@
             document.body.classList.toggle('colorblind-mode');
         }
 
-        // Show alt-text for images
-        function showAltText(id) {
-            const element = document.getElementById(id);
-            element.style.display = element.style.display === 'block' ? 'none' : 'block';
+        // Toggle alt-text visibility for all images
+        function toggleAltText() {
+            const altTexts = document.querySelectorAll('.alt-text');
+            altTexts.forEach(altText => {
+                altText.style.display = altText.style.display === 'block' ? 'none' : 'block';
+            });
         }
     </script>
 </body>
