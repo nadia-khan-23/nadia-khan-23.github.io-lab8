@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Lab Assignment</title>
+    <style>
+        body {
+            font-size: 1em;
+            color: #000;
+            background-color: #fff;
+        }
+        .large-text {
+            font-size: 1.5em;
+        }
+        .colorblind-mode {
+            color: #ef571b;
+            background-color: #1f7dd6;
+        }
+        .alt-text {
+            display: none;
+        }
+        img {
+        width: 600px;
+        height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lab 8 Submission</h1>
+
+    <!-- Part A: -->
+    <figure>
+        <iframe src="https://archive.org/embed/dora-the-explorer-we-did-it-from-star-catcher-vhs-capture" width="560" height="315" allowfullscreen></iframe>
+        <figcaption>Video Source: Archive.org. APA Citation: "Dora the Explorer - We Did It! (from Star Catcher VHS Capture)," Archive.org, accessed November 13, 2024.</figcaption>
+    </figure>
+
+    <!-- Part B: -->
+    <button onclick="toggleTextSize()">Enlarge Text</button>
+
+    <!-- Part C: -->
+    <button onclick="toggleColorblindMode()">Colorblind Mode</button>
+
+    <!-- Part D: -->
+
+    <button onclick="toggleAltText()">Alt Text</button>
+
+    <h2>Gallery</h2>
+    <div> 
+        <img src="image1.jpg" alt="A hockey puck in the bottom left corner that says 'Official Game Puck' with the ongoing game blurred in the background">
+        <imgcaption>The hockey puck from the TMU v Guelph game that I caught on November 1, 2024, in the Mattamy Athletic Center. </imgcaption>
+        <p class="alt-text" id="alt1"> Alt: A TMU hockey puck in the bottom left corner that says 'Official Game Puck' with the ongoing game blurred in the background</p>
+
+        <img src="image2.jpg" alt="Two cups of ice cream served inside waffle bowls held out infront of a lively pink background">
+        <imgcaption>The ice Cream that me and my sister ate on October 28, 2024, in Marble Slab Creamery. </imgcaption>
+        <p class="alt-text" id="alt2">Alt: Two cups of ice cream served inside waffle bowls held out infront of a lively pink background.</p>
+
+        <img src="image3.jpg" alt="A maroon party favour box that is tied with a gold ribbon and has 'Just For You' written in gold on the front.">
+        <imgcaption>The party favours from my friend's wedding on October 11, 2024, in Mississauga. </imgcaption>
+        <p class="alt-text" id="alt3">Alt: A maroon party favour box that is tied with a red ribbon and has 'Just For You' written in gold on the front.</p>
+    </div>
+
+    <script>
+        // Toggle text size
+        function toggleTextSize() {
+            document.body.classList.toggle('large-text');
+        }
+
+        // Toggle colorblind mode
+        function toggleColorblindMode() {
+            document.body.classList.toggle('colorblind-mode');
+        }
+
+        // Toggle alt-text for images
+        function toggleAltText() {
+            const altTexts = document.querySelectorAll('.alt-text');
+            altTexts.forEach(altText => {
+                altText.style.display = altText.style.display === 'block' ? 'none' : 'block';
+            });
+        }
+    </script>
+</body>
+</html>
