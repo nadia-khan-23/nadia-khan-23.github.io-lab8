@@ -1,84 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="This webpage demonstrates SEO and SMO techniques for a web design lab.">
+    <meta name="keywords" content="SEO, SMO, Web Design, Toronto Metropolitan University">
+    <meta name="author" content="Nadia Khan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessibility Lab Assignment</title>
-    <style>
-        body {
-            font-size: 1em;
-            color: #000;
-            background-color: #fff;
-        }
-        .large-text {
-            font-size: 1.5em;
-        }
-        .colorblind-mode {
-            color: #ef571b;
-            background-color: #1f7dd6;
-        }
-        .alt-text {
-            display: none;
-        }
-        img {
-        width: 600px;
-        height: auto;
-        }
-    </style>
+    <title>SEO and SMO Lab Assignment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
+<style>
+    h1{
+        font-size: 50px
+    }
+    h2{
+        font-size: 40px
+    }
+    p{
+        font-size:25px
+    }
+</style>
+
 <body>
+    <header>
+        <h1>Lab 10 Assignment</h1>
+    </header>
 
-    <h1>Lab 8 Submission</h1>
+    <main>
+        <section>
+            <h2>Search Engine Optimization (SEO) Techniques</h2>
+            <p>One effective SEO technique is using meta descriptions. Meta descriptions provide a summary of the webpage's content. They help improve click-through rates as they are displayed on search engine result pages (SERPs). Concise and inviting meta descriptions attract users to visit your site.</p>
+            <p>Another important SEO technique is including relevant keywords in heading tags like &lt;h1&gt; and &lt;h2&gt;. This enhances search engine visibility because those keywords signal to search engines the main topics of the page.</p>
+            <p>Lastly, validating HTML and CSS code ensures the webpage is well-structured. Proper validation minimizes errors which makes it easier for search engines to crawl and index the site.</p>
+        </section>
 
-    <!-- Part A: -->
-    <figure>
-        <iframe src="https://archive.org/embed/dora-the-explorer-we-did-it-from-star-catcher-vhs-capture" width="560" height="315" allowfullscreen></iframe>
-        <figcaption>Video Source: Archive.org. APA Citation: "Dora the Explorer - We Did It! (from Star Catcher VHS Capture)," Archive.org, accessed November 13, 2024.</figcaption>
-    </figure>
+        <section>
+            <h2>Social Media Optimization (SMO) Techniques</h2>
+            <p>Adding social sharing buttons, like Facebook and Instagram, increases user engagement and inbound traffic. Bhargava notes that these buttons make it easier for visitors to share content.</p>
+            <p>Creating visually appealing and sharable content boosts visibility. For example, Instagram posts with attractive designs are more likely to be shared, increasing brand exposure.</p>
+            <p>Engaging with users through comments and replies builds a community around your brand. This interaction fosters loyalty and encourages users to promote your site.</p>
+        </section>
 
-    <!-- Part B: -->
-    <button onclick="toggleTextSize()">Enlarge Text</button>
+        <section>
+            <h2>Instagram Link</h2>
+            <p>Follow Toronto Metropolitan University on Instagram:</p>
+            <a href="https://www.instagram.com/torontomet/?hl=en" target="_blank">
+                <i class="fab fa-instagram" style="font-size: 2em; color: #E1306C;"></i>
+            </a>
+        </section>
+    </main>
 
-    <!-- Part C: -->
-    <button onclick="toggleColorblindMode()">Colorblind Mode</button>
-
-    <!-- Part D: -->
-
-    <button onclick="toggleAltText()">Alt Text</button>
-
-    <h2>Gallery</h2>
-    <div> 
-        <img src="image1.jpg" alt="A hockey puck in the bottom left corner that says 'Official Game Puck' with the ongoing game blurred in the background">
-        <imgcaption>The hockey puck from the TMU v Guelph game that I caught on November 1, 2024, in the Mattamy Athletic Center. </imgcaption>
-        <p class="alt-text" id="alt1"> Alt: A TMU hockey puck in the bottom left corner that says 'Official Game Puck' with the ongoing game blurred in the background</p>
-
-        <img src="image2.jpg" alt="Two cups of ice cream served inside waffle bowls held out infront of a lively pink background">
-        <imgcaption>The ice Cream that me and my sister ate on October 28, 2024, in Marble Slab Creamery. </imgcaption>
-        <p class="alt-text" id="alt2">Alt: Two cups of ice cream served inside waffle bowls held out infront of a lively pink background.</p>
-
-        <img src="image3.jpg" alt="A maroon party favour box that is tied with a gold ribbon and has 'Just For You' written in gold on the front.">
-        <imgcaption>The party favours from my friend's wedding on October 11, 2024, in Mississauga. </imgcaption>
-        <p class="alt-text" id="alt3">Alt: A maroon party favour box that is tied with a red ribbon and has 'Just For You' written in gold on the front.</p>
-    </div>
-
-    <script>
-        // Toggle text size
-        function toggleTextSize() {
-            document.body.classList.toggle('large-text');
-        }
-
-        // Toggle colorblind mode
-        function toggleColorblindMode() {
-            document.body.classList.toggle('colorblind-mode');
-        }
-
-        // Toggle alt-text for images
-        function toggleAltText() {
-            const altTexts = document.querySelectorAll('.alt-text');
-            altTexts.forEach(altText => {
-                altText.style.display = altText.style.display === 'block' ? 'none' : 'block';
-            });
-        }
-    </script>
+    <footer>
+        <p>Lab 10 Assignment by Nadia Khan</p>
+    </footer>
 </body>
+
 </html>
